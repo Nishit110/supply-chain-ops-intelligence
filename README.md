@@ -175,7 +175,7 @@ jupyter notebook notebooks/supply_chain_analysis.ipynb
 
 > Built a supply chain ops intelligence system on 180,000+ shipment records using advanced SQL
 > (CTEs, window functions, LAG/LEAD); designed a Redshift-compatible star schema and developed a
-> standardized 3-tier reporting SOP (daily/weekly/monthly) — anomaly detection queries flagged
+> standardized 3-tier reporting SOP (daily/weekly/monthly), anomaly detection queries flagged
 > a 22% cost variance across carriers, delivering 5× faster insight generation vs manual analysis.
 
 ---
