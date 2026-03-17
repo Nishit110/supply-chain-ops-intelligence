@@ -8,7 +8,7 @@
 
 > Built a supply chain ops intelligence system on 180,000+ shipment records using advanced SQL
 > (CTEs, window functions, LAG/LEAD). Designed a Redshift-compatible star schema, developed a
-> standardized 3-tier reporting SOP, and flagged a **22% cost variance** across carriers —
+> standardized 3-tier reporting SOP, and flagged a **22% cost variance** across carriers,
 > delivering **5× faster** insight generation vs manual analysis.
 
 ---
@@ -84,8 +84,8 @@ project2-supply-chain-ops-intelligence/
 ```
 
 **Redshift design decisions:**
-- `DISTKEY(ship_date)` — optimizes time-range scan queries
-- `SORTKEY(carrier_id)` — optimizes carrier JOIN performance
+- `DISTKEY(ship_date)` optimizes time-range scan queries
+- `SORTKEY(carrier_id)` optimizes carrier JOIN performance
 - Columnar storage compatible — all aggregations on single columns
 
 ---
@@ -140,7 +140,7 @@ Carriers are tiered: Preferred → Acceptable → Monitor → Review Contract
 ## Key Findings
 
 - Detected **22% hidden cost variance** across Q3 ops data — 3 carriers flagged as anomalies
-- Top carrier composite score gap: **34 points** between rank 1 and rank 5 — significant renegotiation opportunity
+- Top carrier composite score gap: **34 points** between rank 1 and rank 5, significant renegotiation opportunity
 - Sustained disruption pattern found in 2 carriers across 3 consecutive weeks
 - 3-tier SOP reporting reduced manual insight generation by **5×** vs prior spreadsheet-based approach
 
