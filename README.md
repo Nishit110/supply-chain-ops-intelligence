@@ -86,20 +86,20 @@ project2-supply-chain-ops-intelligence/
 **Redshift design decisions:**
 - `DISTKEY(ship_date)` optimizes time-range scan queries
 - `SORTKEY(carrier_id)` optimizes carrier JOIN performance
-- Columnar storage compatible — all aggregations on single columns
+- Columnar storage compatible, all aggregations on single columns
 
 ---
 
 ## Key SQL Techniques Used
 
-- **Star schema design** — fact + 4 dimension tables, Redshift-compatible
-- **LAG / LEAD window functions** — month-over-month cost anomaly detection
-- **PARTITION BY** — carrier-level trend isolation
-- **CTEs** — multi-step benchmarking logic
-- **NTILE()** — regional performance quartile ranking
-- **PERCENT_RANK()** — carrier composite scoring
-- **Generated columns** — `delay_days`, `is_late` computed at insert time
-- **3-tier reporting views** — Daily / Weekly / Monthly standardized SOP
+- **Star schema design** fact + 4 dimension tables, Redshift-compatible
+- **LAG / LEAD window functions**  month-over-month cost anomaly detection
+- **PARTITION BY**  carrier-level trend isolation
+- **CTEs**  multi-step benchmarking logic
+- **NTILE()**  regional performance quartile ranking
+- **PERCENT_RANK()**  carrier composite scoring
+- **Generated columns**  `delay_days`, `is_late` computed at insert time
+- **3-tier reporting views**  Daily / Weekly / Monthly standardized SOP
 
 ---
 
@@ -139,7 +139,7 @@ Carriers are tiered: Preferred → Acceptable → Monitor → Review Contract
 
 ## Key Findings
 
-- Detected **22% hidden cost variance** across Q3 ops data — 3 carriers flagged as anomalies
+- Detected **22% hidden cost variance** across Q3 ops data, 3 carriers flagged as anomalies
 - Top carrier composite score gap: **34 points** between rank 1 and rank 5, significant renegotiation opportunity
 - Sustained disruption pattern found in 2 carriers across 3 consecutive weeks
 - 3-tier SOP reporting reduced manual insight generation by **5×** vs prior spreadsheet-based approach
